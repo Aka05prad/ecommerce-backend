@@ -1,17 +1,17 @@
 package com.ecommerce.project_backend.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Positive;
 
 
 public class ProductRequestDTO {
-    @NotBlank(message = "Product name cannot be empty")
+    //@NotBlank(message = "Product name cannot be empty")
     private String name;
-    @NotBlank(message = "Description cannot be empty")
+    //@NotBlank(message = "Description cannot be empty")
     private String description;
-    @Positive(message = "Price must be positive")
+    //@Positive(message = "Price must be positive")
     private double price;
-    @Positive(message = "Stock must be positive")
+    //@Positive(message = "Stock must be positive")
     private int stock;
 
     public String getName() {

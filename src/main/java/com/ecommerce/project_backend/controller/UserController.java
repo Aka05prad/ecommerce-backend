@@ -4,7 +4,8 @@ import com.ecommerce.project_backend.dto.UserRequestDTO;
 import com.ecommerce.project_backend.dto.UserResponseDTO;
 import com.ecommerce.project_backend.service.UserService;
 
-import jakarta.validation.Valid;
+//import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("/api/users")
 @Tag(name = "User Management", description = "APIs for managing users")
+@SecurityRequirement(name = "bearerAuth")   // ADD THIS
 public class UserController {
 
     @Autowired
@@ -22,7 +24,7 @@ public class UserController {
 
     @Operation(summary = "Register new user")
     @PostMapping("/register")
-    public UserResponseDTO registerUser(@Valid @RequestBody UserRequestDTO userRequestDTO) {
+    public UserResponseDTO registerUser(@RequestBody UserRequestDTO userRequestDTO) {
         return userService.registerUser(userRequestDTO);
     }
 

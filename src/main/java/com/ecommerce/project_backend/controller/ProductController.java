@@ -5,7 +5,7 @@ import com.ecommerce.project_backend.dto.ProductResponseDTO;
 //import com.ecommerce.project_backend.entity.Product;
 import com.ecommerce.project_backend.service.ProductService;
 
-import jakarta.validation.Valid;
+//import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +28,7 @@ public class ProductController {
     // Add product
     @Operation(summary = "Add new product")
     @PostMapping
-    public ProductResponseDTO addProduct(@Valid @RequestBody ProductRequestDTO dto){
+    public ProductResponseDTO addProduct(@RequestBody ProductRequestDTO dto){
         return productService.addProduct(dto);
     }
 

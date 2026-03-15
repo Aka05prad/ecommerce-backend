@@ -2,19 +2,21 @@ package com.ecommerce.project_backend.dto;
 
 import com.ecommerce.project_backend.entity.Role;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+//import jakarta.validation.constraints.Email;
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Size;
+//import jakarta.validation.constraints.NotNull;
+
+
 
 public class UserRequestDTO {
-    @NotBlank(message = "Name cannot be empty")
+
     private String name;
-    @Email(message = "Invalid email format")
-    @NotBlank(message = "Email cannot be empty")
+
     private String email;
-    @Size(min = 6, message = "Password must be at least 6 characters")
+
     private String password;
-    @NotBlank(message = "Role cannot be empty")
+
     private Role role;
 
     public UserRequestDTO() {
@@ -58,4 +60,6 @@ public class UserRequestDTO {
     public void setRole(Role role) {
         this.role = role;
     }
+
+
 }
