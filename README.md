@@ -52,6 +52,24 @@ Packages used:
 - utils
 
 ---
+## Database Design
+
+The system database consists of the following entities:
+
+- User
+- Product
+- Cart
+- CartItem
+- Order
+- OrderItem
+
+---
+
+## Database ER Diagram
+
+![ER Diagram](docs/er-diagram.png)
+
+---
 
 ## Features
 
@@ -125,10 +143,13 @@ http://localhost:8080/swagger-ui.html
 
 ## Testing
 
-Unit tests implemented using:
+Service layer tested using JUnit and Mockito.
 
-- JUnit 5
-- Mockito
+Test Coverage:-
+
+- Class Coverage: 85.7%
+- Method Coverage: 65.7%
+- Line Coverage: 70%
 
 ---
 
