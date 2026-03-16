@@ -112,24 +112,40 @@ The system database consists of the following entities:
 
 ---
 
-## How to Run the Project
+## How to Run Locally
 
-### Step 1: Clone the repository
+1. Clone the repository
 
-git clone https://github.com/yourusername/ecommerce-backend.git
+```
+git clone https://github.com/Aka05prad/ecommerce-backend.git
+```
 
-### Step 2: Create MySQL Database
+2. Navigate to project folder
 
-CREATE DATABASE ecommerce_db;
+```
+cd ecommerce-backend
+```
 
-### Step 3: Configure application.properties
+3. Run the application
 
-spring.datasource.username=root  
-spring.datasource.password=<>
-
-### Step 4: Run the application
-
+```
 mvn spring-boot:run
+```
+
+Application will start at:
+
+```
+http://localhost:8080
+```
+
+Swagger API documentation:
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
 
 ---
 
@@ -138,6 +154,8 @@ mvn spring-boot:run
 Swagger UI:
 
 http://localhost:8080/swagger-ui.html
+
+Postman collection is included in the project.
 
 ---
 
@@ -150,6 +168,18 @@ Test Coverage:-
 - Class Coverage: 85.7%
 - Method Coverage: 65.7%
 - Line Coverage: 70%
+
+---
+## Docker Support
+Rebuild the Docker image:-
+
+copy in ubuntu LTS terminal to run
+
+- docker build -t ecommerce-backend .
+
+Run the container again:-
+
+- docker run -p 8080:8080 ecommerce-backend .
 
 ---
 
