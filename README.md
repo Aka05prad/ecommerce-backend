@@ -143,6 +143,16 @@ Swagger API documentation:
 ```
 http://localhost:8080/swagger-ui/index.html
 ```
+4. Install MySQL and create database
+
+5. Update application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+
+spring.datasource.username=root
+
+spring.datasource.password=User@1234
+
 
 ---
 
